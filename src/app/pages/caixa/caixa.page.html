@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Caixa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+      <ion-row>
+          <ion-col size="4">
+              <img src="../../../assets/100.jpg">
+            </ion-col>
+            <ion-col size="4">
+              <ion-input placeholder="X" type="number"
+              [(ngModel)]="qtdeCedulasCem" (focusout)="calculoPorCedulas(100)" >
+            </ion-input>
+            </ion-col>
+            <ion-col size="4">
+              <ion-label> {{ valorCedulasCem | currency:'BRL':true }} </ion-label>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="4">
+              <img src="../../../assets/50.png">
+            </ion-col>
+            <ion-col size="4">
+              <ion-input placeholder="X" type="number"
+              [(ngModel)]="qtdeCedulasCinquenta" (focusout)="calculoPorCedulas(50)" >
+            </ion-input>
+            </ion-col>
+            <ion-col size="4">
+              <ion-label> {{ valorCedulasCinquenta | currency:'BRL':true }} </ion-label>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="4">
+              <img src="../../../assets/20.png">
+            </ion-col>
+            <ion-col size="4">
+              <ion-input placeholder="X" type="number"
+              [(ngModel)]="qtdeCedulasVinte" (focusout)="calculoPorCedulas(20)" >
+            </ion-input>
+            </ion-col>
+            <ion-col size="4">
+                <ion-label> {{ valorCedulasVinte | currency:'BRL':true }} </ion-label>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="4">
+              <img src="../../../assets/10.png">
+            </ion-col>
+            <ion-col size="4">
+              <ion-input placeholder="X" type="number"
+              [(ngModel)]="qtdeCedulasDez" (focusout)="calculoPorCedulas(10)" >
+            </ion-input>
+            </ion-col>
+            <ion-col size="4">
+                <ion-label> {{ valorCedulasDez | currency:'BRL':true }} </ion-label>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="4">
+              <img src="../../../assets/5.jpg">
+            </ion-col>
+            <ion-col size="4">
+              <ion-input placeholder="X" type="number"
+              [(ngModel)]="qtdeCedulasCinco" (focusout)="calculoPorCedulas(5)" >
+            </ion-input>
+            </ion-col>
+            <ion-col size="4">
+                <ion-label> {{ valorCedulasCinco | currency:'BRL':true }} </ion-label>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="4">
+              <img src="../../../assets/2.jpg">
+            </ion-col>
+            <ion-col size="4">
+              <ion-input placeholder="X" type="number"
+              [(ngModel)]="qtdeCedulasDois" (focusout)="calculoPorCedulas(2)" >
+            </ion-input>
+            </ion-col>
+            <ion-col size="4">
+                <ion-label> {{ valorCedulasDois | currency:'BRL':true }} </ion-label>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="4">
+              <img src="../../../assets/moedas-real.png">
+            </ion-col>
+            <ion-col size="4" offset="4">
+              <ion-input placeholder="X" type="number"
+              [(ngModel)]="valorMoedas" (focusout)="calculoPorCedulas('moeda')" >
+              </ion-input>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="6" offset="4">
+              <ion-chip color="success" class="ion-float-right" >
+                  <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+                  <ion-label color="success">  {{ valorTotal | currency:'BRL':true }} </ion-label>
+              </ion-chip>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <img class="img-footer" src="../../../assets/gfinance-footer.png" alt="Genese Finance">
+</ion-footer>

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Consignado
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <h1>Calcular saldo devedor</h1>
+    
+      <form #f="ngForm" (ngSubmit)="calcular()">
+        <ion-item>
+          <ion-label position="floating">Valor parcelas<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required [(ngModel)]="consorcio.valor" name="valor" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Parcelas restantes <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required [(ngModel)]="consorcio.quantidadeParcelas" name="quantidadeParcelas" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Juros (a.m.) <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required [(ngModel)]="consorcio.juros" name="juros" type="number" step="0.01"></ion-input>
+        </ion-item>
+        <ion-button expand="block" color="primary" type="submit" [disabled]="!f.valid">
+          Calcular
+        </ion-button>
+      </form>
+    
+    <div #splash class="splash"
+      [ngClass]="{
+        'visivel': !visivel,
+        'invisivel': visivel
+      }"
+    >
+        <ion-icon name="close" (click)="onClick()" ></ion-icon>
+        <h2>
+          O saldo devedor é: {{ saldoDev | currency:'BRL':true }} <br>
+          Data de vencimento: {{ consorcio.vencimento | date:'dd/MM/yyyy' }}
+        </h2>
+    </div>
+  
+  </ion-content>
+  <ion-footer>
+    <img class="img-footer" src="../../../assets/gfinance-footer.png" alt="Genese Finance">
+  </ion-footer>

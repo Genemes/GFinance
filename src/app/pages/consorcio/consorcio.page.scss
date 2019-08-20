@@ -1,0 +1,38 @@
+.splash{
+    position: fixed;
+    width: 105vw;
+    height: 105vh;
+    left: -2.5%;
+    top: -2.5%;
+    background: rgba(26, 188, 156,1.0);
+    color: #fff;
+    z-index: 999;
+    h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60%;
+    }
+    ion-icon {
+        font-size: 90px;
+    }
+}
+
+.visivel{
+    display: block;
+}
+
+.invisivel{
+    display: none !important;
+}
+
+ion-footer{
+    background: linear-gradient(to right, rgb(241, 196, 15), rgb(211, 84, 0));
+    .img-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        margin: 0 auto;
+    }
+}

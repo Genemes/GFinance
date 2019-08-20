@@ -1,0 +1,26 @@
+ion-content{
+    //font-size: 1.5em;
+    img{
+        height: 50px;
+    }
+    input{
+        border: 2px solid red !important;
+    }
+    ion-label{
+        font-size: 1.5em;
+    }
+    ion-chip{   
+        //text-align: center
+    }
+}
+
+ion-footer{
+    background: linear-gradient(to right, rgb(241, 196, 15), rgb(211, 84, 0));
+    .img-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        margin: 0 auto;
+    }
+}
