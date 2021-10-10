@@ -71,23 +71,4 @@ export class CaixaPage implements OnInit {
     this.valorTotal = this.valorCedulasCem + this.valorCedulasCinquenta + this.valorCedulasVinte + 
         this.valorCedulasDez + this.valorCedulasCinco + this.valorCedulasDois + this.valorMoedas;
   }
-
-  depuracao(){
-    console.log(`
-    qtdeCedulasCem: ${this.qtdeCedulasCem}
-    valorCedulasCem: ${this.valorCedulasCem}
-    qtdeCedulasCinquenta: ${this.qtdeCedulasCinquenta}
-    valorCedulasCinquenta: ${this.valorCedulasCinquenta}
-    qtdeCedulasVinte: ${this.qtdeCedulasVinte}
-    valorCedulasVinte: ${this.valorCedulasVinte}
-    qtdeCedulasDez: ${this.qtdeCedulasDez}
-    valorCedulasDez: ${this.valorCedulasDez}
-    qtdeCedulasCinco: ${this.qtdeCedulasCinco}
-    valorCedulasCinco: ${this.valorCedulasCinco}
-    qtdeCedulasDois: ${this.qtdeCedulasDois}
-    valorCedulasDois: ${this.valorCedulasDois}
-    valorMoedas: ${this.valorMoedas}
-    valorTotal: ${this.valorTotal}
-    `)
-  }
 }
